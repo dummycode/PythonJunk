@@ -3,8 +3,8 @@ import random
 secretNumber = random.randint(1, 100) # random number in range [1, 100]
 print('I am thinking of a number between 1 and 100...')
 
-# Get player's guess
-for numOfGuesses in range(1, 7):
+# get player's guess
+for numOfGuesses in range(1, 11):
     print('Take a guess: ', end='')
     guess = int(input())
     if (guess > secretNumber):
