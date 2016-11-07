@@ -14,4 +14,5 @@ print('Pretzels: ' + str(totalBrought(allGuests, 'pretzels')))
 print('Ham Sandwiches: ' + str(totalBrought(allGuests, 'ham sandwiches')))
 print('Cups: ' + str(totalBrought(allGuests, 'cups')))
 print('Apple pies: ' + str(totalBrought(allGuests, 'apple pies')))
+print('Beer: ' + str(totalBrought(allGuests, 'beer')))
 
