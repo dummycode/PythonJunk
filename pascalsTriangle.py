@@ -12,16 +12,12 @@ def initializeTriangle(triangle, rows):
 def printTriangle(triangle):
     length = len(triangle)
     for i in range(length):
-        numOfTabs = (length - i)
-        for tab in range(numOfTabs):
-            print(" ", end='')
+        numbers = ""
         for number in range(len(triangle[i])):
-                print(" " + str(triangle[i][number]) + " ", end='')
-        for tab in range(numOfTabs):
-            print(" ", end='')
-        print()
+            numbers = numbers + str(triangle[i][number]) + " "
+        print(numbers.center(length * 6))
 
 triangle = []
-initializeTriangle(triangle, 10)
+initializeTriangle(triangle, 25)
 printTriangle(triangle)
 
