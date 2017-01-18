@@ -1,5 +1,5 @@
 import shelve
 
-shelfFile = shelve.open('shelveExample.config')
+shelfFile = shelve.open('shelveExample')
 print(shelfFile['cats'])
 print(shelfFile['size'])
