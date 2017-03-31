@@ -1,5 +1,5 @@
-from getStats import getStats
-from isAveragingTripleDouble import isAveragingTripleDouble
+#!/usr/bin/env python
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # HTTPRequestHandler class
@@ -14,17 +14,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/html')
         self.end_headers()
 
-        # Send message back to client
-        content = ""
-
-        # A simple "Is he?"
-        content += str(isAveragingTripleDouble()) + "<br>"
-
-        # Show stats
-        stats = getStats()
-        content += 'Points: ' + stats[0] + "<br>"
-        content += 'Assists: ' + stats[1] + "<br>"
-        content += 'Rebounds: ' + stats[2]
+        content = "Hello World!"
 
         # Write content as utf-8 data
         self.wfile.write(bytes(content, "utf8"))
