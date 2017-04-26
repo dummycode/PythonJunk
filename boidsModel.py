@@ -6,7 +6,7 @@ import matplotlib.animation as animation
 from scipy.spatial.distance import squareform, pdist, cdist
 from numpy.linalg import norm
 
-width, height = 1920, 1440
+width, height = 640, 480
 
 class Boids:
     def __init__(self, N):
@@ -103,7 +103,7 @@ def tick(frameNum, pts, beak, boids):
 def main():
     print('Starting boids...')
 
-    N = 100
+    N = 20
 
     boids = Boids(N)
 
