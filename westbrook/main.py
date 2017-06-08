@@ -15,7 +15,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Send message back to client
-        content = ""
+        content = "Is Westbrook averaging a triple double?<br>"
 
         # A simple "Is he?"
         content += str(isAveragingTripleDouble()) + "<br>"
