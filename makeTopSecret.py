@@ -10,7 +10,6 @@ pdfReader = PyPDF2.PdfFileReader(pdfFile)
 firstPage = pdfReader.getPage(0)
 
 if (not isVertical(firstPage)):
-    print('test')
     firstPage.rotateCounterClockwise(90)
 
 if (firstPage.get('/Rotate')):
