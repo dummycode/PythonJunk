@@ -16,12 +16,12 @@ rows = thisSeasonAverages.findChildren('tr')
 cells = rows[0].findChildren('td')
 stats = []
 for i in range(3):
-    value = str(cells[i].string)
+    value = float(cells[i].string)
     stats.append(value)
 
 shelf = shelve.open('stats')
 shelf['points'] = stats[0]
-shelf['assists'] = stats[1];
+shelf['assists'] = stats[1]
 shelf['rebounds'] = stats[2]
 shelf.close()
 

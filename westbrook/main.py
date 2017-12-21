@@ -12,19 +12,11 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
 
         # Send headers
         self.send_header('Content-type','text/html')
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
-        # Send message back to client
-        content = "Is Westbrook averaging a triple double?<br>"
-
         # A simple "Is he?"
-        content += str(isAveragingTripleDouble()) + "<br>"
-
-        # Show stats
-        stats = getStats()
-        content += 'Points: ' + stats[0] + "<br>"
-        content += 'Assists: ' + stats[1] + "<br>"
-        content += 'Rebounds: ' + stats[2]
+        content = str((isAveragingTripleDouble(), getStats()))
 
         # Write content as utf-8 data
         self.wfile.write(bytes(content, "utf8"))
